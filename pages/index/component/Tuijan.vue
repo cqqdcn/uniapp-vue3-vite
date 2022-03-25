@@ -38,7 +38,53 @@
 				</view>
 				<view class="tuijian-2a-pic">
 					<scroll-view class="scroll-view" scroll-x="true" @scroll="scroll">
-						<view v-for="(item,index) in ScrollTit" :key="index">{{item}}
+						<view class="tuijian-List">
+							<view class="tuijian-2a-pic-1">
+								<image src="https://file05.c.hihonor.com/pimages/cnqx/product/6973316856217/428_428_8603CAC13A355F369BDC63D081B2FF9D76F07E95A72231EBmp.png" mode=""></image>
+							</view>
+							<view class="tuijian-2a-pic-2">
+								荣耀50
+							</view>
+							<view class="tuijian-2a-pic-3">
+								<text class="tj-text1">¥2399</text>
+								<text class="tj-text2">¥2688</text>
+							</view>
+						</view>
+						<view class="tuijian-List">
+							<view class="tuijian-2a-pic-1">
+								<image src="https://file05.c.hihonor.com/pimages/cnqx/product/6973316856217/428_428_8603CAC13A355F369BDC63D081B2FF9D76F07E95A72231EBmp.png" mode=""></image>
+							</view>
+							<view class="tuijian-2a-pic-2">
+								荣耀50
+							</view>
+							<view class="tuijian-2a-pic-3">
+								<text class="tj-text1">¥2399</text>
+								<text class="tj-text2">¥2688</text>
+							</view>
+						</view>
+						<view class="tuijian-List">
+							<view class="tuijian-2a-pic-1">
+								<image src="https://file05.c.hihonor.com/pimages/cnqx/product/6973316856217/428_428_8603CAC13A355F369BDC63D081B2FF9D76F07E95A72231EBmp.png" mode=""></image>
+							</view>
+							<view class="tuijian-2a-pic-2">
+								荣耀50
+							</view>
+							<view class="tuijian-2a-pic-3">
+								<text class="tj-text1">¥2399</text>
+								<text class="tj-text2">¥2688</text>
+							</view>
+						</view>
+						<view class="tuijian-List">
+							<view class="tuijian-2a-pic-1">
+								<image src="https://file05.c.hihonor.com/pimages/cnqx/product/6973316856217/428_428_8603CAC13A355F369BDC63D081B2FF9D76F07E95A72231EBmp.png" mode=""></image>
+							</view>
+							<view class="tuijian-2a-pic-2">
+								荣耀50
+							</view>
+							<view class="tuijian-2a-pic-3">
+								<text class="tj-text1">¥2399</text>
+								<text class="tj-text2">¥2688</text>
+							</view>
 						</view>
 					</scroll-view>
 				</view>
@@ -101,6 +147,7 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+		margin-bottom: 3%;
 		view{
 			font-size: 32rpx;
 			color: #000;
@@ -110,6 +157,50 @@
 			font-size: 24rpx;
 			color: #999;
 			margin-left: 10rpx;
+		}
+	}
+	.tuijian-2a-pic{
+		padding: 4%;
+		background-color: #fff;
+	}
+	.scroll-view{
+		background-color: #fff;
+		white-space: nowrap;
+		.tuijian-List{
+			display: inline-block;
+			width: 200rpx;
+			margin-right: 20rpx;
+			.tuijian-2a-pic-1{
+				background-color: #f5f5f5;
+				image{
+					width: 200rpx;
+					height: 200rpx;
+				}
+			}
+			.tuijian-2a-pic-2{
+				font-size: 26rpx;
+				text-align: center;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				margin: 0 0 20rpx 0;
+			}
+			.tuijian-2a-pic-3{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				.tj-text1{
+					font-size: 26rpx;
+					color: #ce4436;
+				}
+				.tj-text2{
+					font-size: 22rpx;
+					color: #8d8d8d;
+					margin-left: 6rpx;
+					text-decoration:line-through
+				}
+			}
 		}
 	}
 </style>
