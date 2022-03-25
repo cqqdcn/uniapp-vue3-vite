@@ -1,0 +1,16 @@
+{
+    "id": "letsgofishing-Tab",
+    "name": "Tab-custom",
+    "version": "2.0.4",
+    "description": "滑动tab，代码极简，一眼看明白源码，标签宽度自适应",
+    "keywords": [
+        "tab组件",
+        "Tab"
+    ],
+    "dcloudext": {
+        "category": [
+            "前端组件",
+            "通用组件"
+        ]
+    }
+}

@@ -1,0 +1,77 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/addShop/addShop",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/shopCar/shopCar",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/fenlei/fenlei",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#000",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "/static/home.png",
+			"selectedIconPath": "/static/home_selected1.png",
+			"text": "首页"
+		}, {
+			"pagePath": "pages/addShop/addShop",
+			"iconPath": "/static/allProduct.png",
+			"selectedIconPath": "/static/allProduct_selected1.png",
+			"text": "全部商品"
+		}, {
+			"pagePath": "pages/shopCar/shopCar",
+			"iconPath": "/static/cart.png",
+			"selectedIconPath": "/static/cart_selected1.png",
+			"text": "购物车"
+		}, {
+			"pagePath": "pages/fenlei/fenlei",
+			"iconPath": "/static/ic_cate.png",
+			"selectedIconPath": "/static/ic_cate_selected1.png",
+			"text": "分类"
+		}, {
+			"pagePath": "pages/my/my",
+			"iconPath": "/static/my.png",
+			"selectedIconPath": "/static/my.png",
+			"text": "我的"
+		}]
+	}
+}
