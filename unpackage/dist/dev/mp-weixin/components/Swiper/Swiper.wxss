@@ -1,0 +1,14 @@
+.swiper-box {
+  width: 100%;
+  height: 380rpx;
+}
+.swiper-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.swiper-item image {
+  width: 100%;
+}

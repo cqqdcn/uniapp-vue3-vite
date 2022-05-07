@@ -1,0 +1,1 @@
+<view class="topReturn data-v-e3ba9378"><image class="data-v-e3ba9378" bindtap="{{a}}" src="/static/headerBack.png" mode="widthFix"></image><text class="data-v-e3ba9378"><slot></slot></text></view>

@@ -34,7 +34,7 @@
 	console.log(Object)
 </script>
 
-<style scoped lang='less'>
+<style lang="less">
 	.swiper-box {
 		width: 100%;
 		height: 380rpx;
@@ -51,7 +51,7 @@
 
 		image {
 			width: 100%;
-			height: 380rpx;
+			// height: 380rpx;
 		}
 	}
 </style>

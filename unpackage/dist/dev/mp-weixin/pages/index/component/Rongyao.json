@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "uni-countdown": "../../../uni_modules/uni-countdown/components/uni-countdown/uni-countdown",
+    "swiper": "../../../components/Swiper/Swiper"
+  }
+}

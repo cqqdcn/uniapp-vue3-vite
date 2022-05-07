@@ -1,0 +1,1 @@
+<view class=""><return u-s="{{['d']}}" u-i="e2646cb2-0" bind:__l="__l"><text>选择城市</text></return><view class="city"><t-index-address bindselect="{{a}}" u-i="e2646cb2-1" bind:__l="__l"></t-index-address></view></view>

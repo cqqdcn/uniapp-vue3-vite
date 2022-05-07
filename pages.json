@@ -3,38 +3,68 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app",
+				"navigationBarTitleText": "首页",
 				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path": "pages/addShop/addShop",
 			"style": {
-				"navigationBarTitleText": "uni-app",
-				"navigationStyle": "custom"
+				"navigationBarTitleText": "全部商品",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
 			"path": "pages/shopCar/shopCar",
 			"style": {
-				"navigationBarTitleText": "uni-app",
+				"navigationBarTitleText": "购物车",
 				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path": "pages/fenlei/fenlei",
 			"style": {
-				"navigationBarTitleText": "uni-app",
+				"navigationBarTitleText": "分类",
 				"navigationStyle": "custom"
 			}
 		},
 		{
 			"path": "pages/my/my",
 			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/indexSearch/indexSearch",
+			"style": {
 				"navigationBarTitleText": "uni-app",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/xingqing/xingqing",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/xingqing/city",
+			"style": {
+				"navigationBarTitleText": "uni-app",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom"
+			}
 		}
+		
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -70,7 +100,7 @@
 		}, {
 			"pagePath": "pages/my/my",
 			"iconPath": "/static/my.png",
-			"selectedIconPath": "/static/my.png",
+			"selectedIconPath": "/static/my1.png",
 			"text": "我的"
 		}]
 	}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "uni-app",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tuijian": "./component/Tuijan",
+    "qinxuan": "./component/Qinxuan",
+    "rongyao": "./component/Rongyao"
+  }
+}

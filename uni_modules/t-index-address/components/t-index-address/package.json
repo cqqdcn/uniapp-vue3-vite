@@ -1,0 +1,7 @@
+{
+	"name": "t-index-address",
+	"main": "main.js",
+	"dependencies": {
+		"js-pinyin": "^0.1.9"
+	}
+}

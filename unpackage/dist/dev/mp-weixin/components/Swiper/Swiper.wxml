@@ -1,0 +1,1 @@
+<view><uni-swiper-dot wx:if="{{d}}" u-s="{{['d']}}" u-i="2802b4d3-0" bind:__l="__l" u-p="{{d}}"><swiper class="swiper-box" bindchange="{{b}}" current="{{c}}"><swiper-item wx:for="{{a}}" wx:for-item="item" wx:key="b"><view class="swiper-item"><image src="{{item.a}}" mode="widthFix"></image></view></swiper-item></swiper></uni-swiper-dot></view>

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "uni-app",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uni-goods-nav": "../../uni_modules/uni-goods-nav/components/uni-goods-nav/uni-goods-nav",
+    "swiper": "../../components/Swiper/Swiper",
+    "xingqing": "./xingqingMob"
+  }
+}

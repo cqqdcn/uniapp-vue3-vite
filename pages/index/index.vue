@@ -3,7 +3,7 @@
 		<view class="homeTop">
 			<view class="homeTop-1">
 				<image class="homeTop-img1" src="@/static/ryqxlogo.png" mode="widthFix"></image>
-				<view class="homeTop-1a">
+				<view class="homeTop-1a" @click="jumpSearch">
 					<image class="homeTop-img2" src="@/static/ic-seacher.png" mode="widthFix"></image>
 					<swiper class="swiper" autoplay="true" vertical="true" interval="3000">
 						<swiper-item>
@@ -25,7 +25,7 @@
 			</view>
 		</view>
 		<view class="scroll-right">
-			<scroll-view class="scroll-view" scroll-x="true" @scroll="scroll">
+			<scroll-view class="scroll-view" scroll-x="true" @scroll="scroll" show-scrollbar="false">
 				<view :class="[index == ShowNum?'scrollShow':'']" @click="ChangeIndex(index)" v-for="(item,index) in ScrollTit" :key="index">{{item}}
 				</view>
 			</scroll-view>
@@ -36,39 +36,46 @@
 		</view>
 		<!-- 亲选生态 -->
 		<view class="qxText" v-show="ShowNum==1?true:false">
-			
+			<Qinxuan/>
 		</view>
 		<!-- 荣耀手机 -->
 		<view class="horText" v-show="ShowNum==2?true:false">
-			
+			<Rongyao/>
 		</view>
 		<!-- 智慧屏 -->
 		<view class="zhText" v-show="ShowNum==3?true:false">
-			
+			<Tuijian/>
 		</view>
 		<!-- 电脑平板 -->
 		<view class="dnText" v-show="ShowNum==4?true:false">
-			
+			<Qinxuan/>
 		</view>
 		<!-- 智能家居 -->
 		<view class="znText" v-show="ShowNum==5?true:false">
-			
+			<Rongyao/>
 		</view>
 	</view>
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 	import { ref, reactive , onMounted } from 'vue'
 	import Tuijian from './component/Tuijan.vue'
+	import Qinxuan from './component/Qinxuan.vue'
+	import Rongyao from './component/Rongyao.vue'
 	const ScrollTit = ref(['推荐', '亲选生态', '荣耀手机', '智慧屏', '电脑平板', '智能家居'])
 	const ShowNum = ref(0)
 	const ChangeIndex = index => {
 		ShowNum.value = index
 	}
-
+	const jumpSearch = ()=>{
+		uni.navigateTo({
+			url: '/pages/indexSearch/indexSearch'
+		});
+	}
 </script>
 
 <style scoped lang="less">
+	.gggg{background-color: #000;}
 	.homeTop {
 		background-color: #000;
 		height: 100rpx;
@@ -162,6 +169,12 @@
 			margin-right: 8%;
 			padding-bottom: 2%;
 		}
+	}
+	scroll-view ::-webkit-scrollbar {
+	    display:none;
+	    width: 0; 
+	    height: 0;
+	    background-color: transparent; 
 	}
 	.scrollShow{
 		position: relative;

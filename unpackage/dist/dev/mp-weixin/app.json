@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/addShop/addShop",
+    "pages/shopCar/shopCar",
+    "pages/fenlei/fenlei",
+    "pages/my/my",
+    "pages/indexSearch/indexSearch",
+    "pages/xingqing/xingqing",
+    "pages/xingqing/city"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#000",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/static/home.png",
+        "selectedIconPath": "/static/home_selected1.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/addShop/addShop",
+        "iconPath": "/static/allProduct.png",
+        "selectedIconPath": "/static/allProduct_selected1.png",
+        "text": "全部商品"
+      },
+      {
+        "pagePath": "pages/shopCar/shopCar",
+        "iconPath": "/static/cart.png",
+        "selectedIconPath": "/static/cart_selected1.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/fenlei/fenlei",
+        "iconPath": "/static/ic_cate.png",
+        "selectedIconPath": "/static/ic_cate_selected1.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "/static/my.png",
+        "selectedIconPath": "/static/my.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
