@@ -75,6 +75,9 @@
 </script>
 
 <style scoped lang="less">
+	page{
+		overflow: hidden;
+	}
 	.gggg{background-color: #000;}
 	.homeTop {
 		background-color: #000;

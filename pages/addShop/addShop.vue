@@ -10,7 +10,7 @@
 			</view>
 		</view>
 		<view class="addShopList">
-			<view class="addShopList1" v-for="(item,index) in List.proList" :key="item.goods_id">
+			<view class="addShopList1" v-for="(item,index) in List.proList" :key="item.goods_id" @tap="rerurnxq">
 				<view class="addShopList1a">
 					<image :src="item.img" mode=""></image>
 				</view>
@@ -92,6 +92,11 @@
 		loadData()
 		uni.stopPullDownRefresh()
 	})
+	const rerurnxq = ()=>{
+		uni.navigateTo({
+			url:'/pages/xingqing/xingqing'
+		})
+	}
 </script>
 
 <style scoped lang="less">

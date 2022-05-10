@@ -25,25 +25,28 @@
 
 <script setup lang="ts">
 	import { ref } from 'vue'
+	import { useStore } from "@/stores/store.js"
+	const store = useStore()
 	const returnNext = () => {
-		uni.navigateTo({
-			url: '/pages/index/index'
+		uni.switchTab({
+			url:'/pages/index/index'
 		})
 	}
 	const formSubmit = (e)=>{
-		if(e.detail.value.zh == ''){
+		if(!e.detail.value.zh){
 			uni.showToast({
 				title: '请输入账号',
 				icon: 'none',
 				duration: 2000,
 			});
-		}else if(e.detail.value.pass == ''){
+		}else if(!e.detail.value.pass){
 			uni.showToast({
 				title: '请输入密码',
 				icon: 'none',
 				duration: 2000,
 			});
 		}else{
+			store.token = true
 			uni.showToast({
 				title: '登录成功',
 				duration: 2000,

@@ -72,5 +72,13 @@
         "enable" : false
     },
     "vueVersion" : "3",
-    "h5" : {}
+    "h5" : {
+        "sdkConfigs" : {
+            "maps" : {
+                "qqmap" : {
+                    "key" : "J5ZBZ-JKJ6O-7THWL-ST6EG-W4XJ6-OMBLG"
+                }
+            }
+        }
+    }
 }

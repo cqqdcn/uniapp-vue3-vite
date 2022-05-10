@@ -52,7 +52,7 @@
 
 <script setup lang="ts">
 	import { ref } from 'vue'
-	import Return from '~@/components/Return/Return.vue'
+	import Return from '@/components/Return/Return.vue'
 	const searchValue = ref('荣耀Earbuds 3 Pro')
 	const returnNext = () => {
 		// 获取当前页面的实例，判断页面是否刷新

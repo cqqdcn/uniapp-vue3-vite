@@ -1,18 +1,8 @@
 <template>
-	<view class="shopCar">
-		<view class="shopCarTitle">
-			购物车
-		</view>
-		<view class="shopHide" v-show="List.ListText == 0">
-			购物车空空如也~~
-		</view>
+	<view>
+		<Return><text>确认订单</text></Return>
 		<view class="shopCarList">
 			<view class="shopList" v-for="(item,index) in List.ListText" :key="index">
-				<view class="List1">
-					<view class="List1a" @tap="quanxuan">
-						<text :class="{on:slected}"></text>
-					</view>
-				</view>
 				<view class="List2">
 					<image :src="item.pic" mode="widthFix"></image>
 					<view class="List2a">
@@ -26,99 +16,30 @@
 			</view>
 		</view>
 		<view class="shopCarJs">
-			<view class="List1">
-				<view class="List1a" @tap="quanxuan">
-					<text :class="{on:slected}"></text>
-				</view>
-				<view class="List1c" @tap="quanxuan">全选</view>
-				<view class="List1b" v-show="slected" @tap="removeStr">
-					删除
-				</view>
-			</view>
 			<view class="shopCarJsRight">
 				<view class="shopCarJsRight-1">合计:￥<text>{{jiage}}</text></view>
-				<view class="shopCarJsRight-2" @tap="jiesuan">结算</view>
+				<view class="shopCarJsRight-2" @tap="jiesuan">提交订单</view>
 			</view>
 		</view>
 	</view>
 </template>
 
 <script setup lang="ts">
-	import { ref ,reactive} from 'vue'
+	import { ref ,reactive } from 'vue'
 	import { onLoad,onShow } from "@dcloudio/uni-app"
-	onShow(()=>{
-		uni.getStorage({
-			key: 'shopCarList',
-			success: function (res) {
-				List.ListText = res.data
-			}
-		})
-		console.log(JSON.parse(JSON.stringify(List.ListText)).length)
+	import Return from '@/components/Return/Return.vue'
+	onLoad((option)=>{
+		List.ListText = JSON.parse(option.text)
 	})
 	const List = reactive({
 		ListText:[]
 	})
 	const slected = ref(false)
-	const jiage = ref('0.00')
-	const quanxuan = ()=>{
-		if(JSON.parse(JSON.stringify(List.ListText)).length == 0){
-			uni.showToast({
-				icon:'none',
-				title: '还没有商品',
-				duration: 2000
-			});
-		}else{
-			slected.value = !slected.value
-			if(slected.value == true){
-				jiage.value = 5448
-			}else{
-				jiage.value = '0.00'
-			}
-		}
-		
-	}
-	const removeStr = ()=>{
-		uni.removeStorage({
-			key: 'shopCarList',
-			success: function (res) {
-				uni.showToast({
-					icon:'success',
-					title: '移出购物车成功',
-					duration: 2000
-				});
-				slected.value = false
-				List.ListText = []
-			}
-		});
-	}
-	const jiesuan = ()=>{
-		if(slected.value != true){
-			uni.showToast({
-				icon:'none',
-				title: '请选择结算的商品',
-				duration: 2000
-			});
-		}else{
-			uni.navigateTo({
-				url:'/pages/shopCar/shopCarXq?text=' + JSON.stringify(List.ListText)
-			})
-		}
-	}
+	const jiage = ref('5488')
 </script>
 
 <style scoped lang="less">
-	.shopHide{
-		text-align: center;
-		color: #a7a7a7;
-		margin-top: 50rpx;
-	}
-	.shopCarTitle{
-		line-height: 90rpx;
-		text-align: center;
-		font-size: 34rpx;
-		font-weight: bold;
-	}
-	.shopCarList{
+.shopCarList{
 		padding: 0 3%;
 	}
 	.shopList{
@@ -132,7 +53,7 @@
 			.List1a{
 				width: 30rpx;
 				height: 30rpx;
-				border: 2rpx solid red;
+				border: 1rpx solid red;
 				border-radius: 50%;
 				display: flex;
 				align-items: center;
@@ -170,7 +91,7 @@
 		position: fixed;
 		width: 90%;
 		line-height: 90rpx;
-		bottom: 100rpx;
+		bottom: 0;
 		background-color: #fbfbfb;
 		display: flex;
 		flex-direction: row;
@@ -183,11 +104,11 @@
 			align-items: center;
 			font-size: 26rpx;
 			color: #000;
-			width: 40%;
+			width: 50%;
 			.List1a{
 				width: 30rpx;
 				height: 30rpx;
-				border: 2rpx solid red;
+				border: 1rpx solid red;
 				border-radius: 50%;
 				display: flex;
 				flex-direction: row;
@@ -199,12 +120,11 @@
 			}
 			.List1b{
 				color: #f06c7a;
-				border: 2rpx solid #f06c7a;
+				border: 1rpx solid #f06c7a;
 				border-radius: 60rpx;
 				line-height: 40rpx;
 				font-size: 24rpx;
-				width: 100rpx;
-				text-align: center;
+				padding: 0 4%;
 				margin-left: 4%;
 			}
 		}
@@ -212,11 +132,13 @@
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			width: 60%;
 			justify-content: flex-end;
+			width: 100%;
 			.shopCarJsRight-1{
 				font-size: 26rpx;
-				margin-right: 3%;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
 				text{
 					color: #f06c7a;
 					font-weight: bold;
@@ -228,9 +150,10 @@
 				color: #fff;
 				background-color: #f06c7a;
 				line-height: 50rpx;
-				width: 100rpx;
+				width: 200rpx;
 				text-align: center;
 				border-radius: 60rpx;
+				margin-left: 5%;
 			}
 		}
 	}

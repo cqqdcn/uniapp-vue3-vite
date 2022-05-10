@@ -4,14 +4,15 @@ import { defineStore } from "pinia";
 export const useStore = defineStore({
 	id: "City",
 	state: () => ({
-		city: "请选择地址"
+		city: "请选择地址",
+		token: false
 	}),
 	getters: {
 		double: (state) => state.count * 2,
 	},
 	actions: {
-		increment() {
-			this.count++
+		ExitLogin(value) {
+			this.token = value
 		}
 	}
 

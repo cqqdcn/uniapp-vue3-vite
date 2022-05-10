@@ -7,7 +7,7 @@
 			<view class="center-1">
 				<image class="center-1a" src="/static/cenPic21.png" mode="widthFix" />
 				<view class="center-1b">
-					<text>登陆/注册</text>
+					<text>15025447471/欢迎登陆</text>
 					<image src="/static/cenPic20.png" mode="widthFix" />
 				</view>
 			</view>
@@ -61,7 +61,7 @@
 					</view>
 				</view>
 			</view>
-			<view class="center-4">
+			<view class="center-4" @tap="ExitLogin">
 				退出登录
 			</view>
 		</view>
@@ -70,6 +70,29 @@
 
 <script setup lang="ts">
 	import { ref } from 'vue'
+	import { onLoad,onShow } from "@dcloudio/uni-app"
+	import { useStore } from "@/stores/store.js"
+	const store = useStore()
+	onLoad(() => {
+	    if(!store.token){
+			uni.navigateTo({
+				url:'/pages/login/login'
+			})
+		}    
+	})
+	onShow(()=>{
+		if(!store.token){
+			uni.navigateTo({
+				url:'/pages/login/login'
+			})
+		}    
+	})
+	const ExitLogin = ()=>{
+		uni.navigateTo({
+			url:'/pages/login/login'
+		})
+		store.ExitLogin(false)
+	}
 </script>
 
 <style scoped lang="less">

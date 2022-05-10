@@ -17,7 +17,7 @@
 			联系客服领取平板、笔记本优惠券（多屏协同、自由互联）
 		</view>
 		<view class="xingqing-3">
-			<view class="xingqing-3a">¥5499</view>
+			<view class="xingqing-3a">¥{{ggPhone.jiage}}</view>
 			<view class="xingqing-3b">【新品上市】荣耀Magic4 Pro</view>
 			<view class="xingqing-3c">全新一代骁龙8 | 多主摄融合计算摄影 | 智慧隐私通话</view>
 			<view class="xingqing-3d">【重磅开售 三重福利】</view>
@@ -102,7 +102,7 @@
 		}, {
 			icon: 'cart',
 			text: '购物车',
-			info: 2
+			info: 0
 		}],
 		maodian: [
 			'商品',
@@ -135,7 +135,8 @@
 		}],
 		colorNum: 0,
 		banbNum: 0,
-		banbText: '8+256GB'
+		banbText: '8+256GB',
+		jiage: 5448
 	})
 	// 计算滑动的距离
 	const y = ref(0)
@@ -183,6 +184,34 @@
 			document.querySelector("#whdd").scrollIntoView(true);
 		} else {
 			uni.pageScrollTo({ scrollTop: 0, duration: 0 })
+		}
+	}
+	// 点击购物车跳转
+	const onClick = () =>{
+		uni.switchTab({
+			url:'/pages/shopCar/shopCar'
+		})
+	}
+	const buttonClick = (e)=>{
+		if(e.index == 0){
+			SwiperPic.options[1].info++
+			let shopCarList = [{
+				pic: ggPhone.popupColor[ggPhone.colorNum].pic,
+				title: '全新一代骁龙8 | 多主摄融合计算摄影 | 智慧隐私通话',
+				jiage:ggPhone.jiage,
+				gg: ggPhone.banbText,
+			}]
+			uni.setStorage({
+				key: 'shopCarList',
+				data: shopCarList,
+				success: function () {
+					uni.showToast({
+						icon:'success',
+						title: '已添加至购物车',
+						duration: 2000
+					})
+				}
+			});
 		}
 	}
 	// pinia

@@ -23,6 +23,13 @@
 			}
 		},
 		{
+			"path": "pages/shopCar/shopCarXq",
+			"style": {
+				"navigationBarTitleText": "确定订单",
+				"navigationStyle": "custom"
+			}
+		},
+		{
 			"path": "pages/fenlei/fenlei",
 			"style": {
 				"navigationBarTitleText": "分类",
